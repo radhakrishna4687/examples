@@ -9,17 +9,20 @@
     "deploy:local": "export $(cat ./config/.env | xargs) && serverless deploy --stage $STAGE --region $REGION --verbose",
     "remove:stack": "export $(cat ./config/.env | xargs) && sls remove -s $STAGE",
     "offline": "export $(cat ./config/.env | xargs) && serverless offline start --stage $STAGE",
-    "add:env": "./config/push-secret.sh"
+    "add:env": "./config/push-secret.sh",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "@babel/runtime": "^7.3.1",
     "babel-runtime": "^7.0.0-beta.3",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.20",
     "serverless-offline": "^4.7.0",
     "serverless-webpack": "^5.2.0",
     "sharp": "^0.21.3",
     "source-map-support": "^0.5.10",
-    "stream": "^0.0.2"
+    "stream": "^0.0.2",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -41,5 +44,6 @@
   },
   "resolutions": {
     "babel-core": "7.0.0-bridge.0"
-  }
+  },
+  "snyk": true
 }
