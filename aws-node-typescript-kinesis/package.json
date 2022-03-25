@@ -5,14 +5,17 @@
   "main": "producer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "tslint -p tsconfig.json -c tslint.json"
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "serverless-webpack": "^5.2.0",
     "aws-lambda": "^1.0.5",
     "aws-sdk": "^2.553.0",
     "source-map-support": "^0.5.10",
-    "uuid": "^8.2.0"
+    "uuid": "^8.2.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.17",
@@ -25,5 +28,6 @@
     "webpack": "^4.29.0"
   },
   "author": "Bill Kidwell (https://github.com/billkidwell/aws-node-typescript-kinesis)",
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
