@@ -1,2 +1,2 @@
 cryptography==2.3
-PyJWT==1.6.4
+PyJWT==2.4.0
