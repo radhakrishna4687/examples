@@ -12,7 +12,7 @@
     "dependencies": {
         "@azure/functions": "^1.0.3",
         "@azure/service-bus": "^1.1.10",
-        "azure-functions-core-tools": "^2.7.1846",
+        "azure-functions-core-tools": "^4.0.5148",
         "serverless-azure-functions": "^2.0.9",
         "serverless-dotenv-plugin": "^2.1.1",
         "serverless-plugin-resource-tagging": "^1.0.11"
