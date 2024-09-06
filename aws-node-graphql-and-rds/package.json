@@ -9,9 +9,9 @@
         "remove": "serverless remove"
     },
     "dependencies": {
-        "graphql-yoga": "^1.17.4",
+        "graphql-yoga": "^2.0.0",
         "pg": "^7.11.0",
-        "serverless-mysql": "^1.4.0",
+        "serverless-mysql": "^1.5.3",
         "uuid": "^3.3.2"
     },
     "devDependencies": {
